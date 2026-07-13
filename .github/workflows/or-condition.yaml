@@ -1,0 +1,9 @@
+name: Or condition Demo
+on: push
+jobs: 
+  demo: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run this is shan or raj
+        if: github.actor == 'Hari' || github.actor == 'shanmugarajshan'
+        run: echo "Running this shanmugarajshan"
